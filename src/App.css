@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+}
+
+.container{
+  text-align: center;
+  min-height: 100vh;
+  margin: 30px 10%;
+}
+
+.counters{
+  display: flex;
+  margin: 10px;
+  padding: 20px 10px;
+}

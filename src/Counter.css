@@ -1,0 +1,14 @@
+
+.counter{
+    width: 100%;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 18px;
+}
+
+.timeLeft{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 30px 10px;
+}

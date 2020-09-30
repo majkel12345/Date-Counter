@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter'
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello</p>
+    <div className="container">
+      <h1>Date Counter</h1>
+      <div className='counters'>
+        <Counter 
+        name = 'Nowy Rok'
+        />
+      </div>
     </div>
   );
 }

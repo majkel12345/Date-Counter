@@ -1,14 +1,45 @@
 
 .counter{
-    width: 100%;
+    display: inline;
     padding: 20px;
+    margin: 20px;
     background-color: aliceblue;
     border-radius: 18px;
+    max-width: 450px;
+    box-shadow: 0 0 5px rgba(0, 0, 0 ,1);
+
 }
+
+.counter:hover {
+    background-color: teal;
+}
+
 
 .timeLeft{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    flex-wrap: wrap;
     margin: 30px 10px;
+}
+
+.box {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.box:hover {
+    animation: spin infinite 1s linear;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

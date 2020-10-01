@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../Counter.css'
 
-const Counter = ({name}) => {
+const Counter = ({name, date}) => {
 
-    const newYear = '1 Jan 2021'
-
-    const newYearDate = new Date(newYear)
+    const newYearDate = new Date(date)
     const currentDate = new Date()
     const timeInSeconds = (newYearDate - currentDate) /1000
         
@@ -30,19 +28,19 @@ const Counter = ({name}) => {
         <div className='counter'>
             <h3>{name}</h3>
             <div className='timeLeft'>
-                <div>
+                <div className='box'>
                     {days}
                     <p>Dni</p>
                 </div>
-                <div>
+                <div className='box'>
                     {hours}
                     <p>Godzin</p>
                 </div>
-                <div>
+                <div className='box'>
                     {minutes}
                     <p>Minut</p>
                 </div>
-                <div>
+                <div className='box'>
                     {seconds}
                     <p>Sekund</p>
                 </div>

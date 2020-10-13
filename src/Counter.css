@@ -3,7 +3,8 @@
     display: inline;
     padding: 20px;
     margin: 20px;
-    background-color: aliceblue;
+    background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-position: center;
     border-radius: 18px;
     max-width: 450px;
     box-shadow: 0 0 5px rgba(0, 0, 0 ,1);
@@ -11,7 +12,8 @@
 }
 
 .counter:hover {
-    background-color: teal;
+    background-image: url('https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-position: center;
 }
 
 

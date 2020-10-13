@@ -3,14 +3,14 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
 }
 
 .container{
   text-align: center;
   min-height: 100vh;
   margin: 0 10%;
-  background-color: rgb(111, 0, 255);
+  background-color:white;
 }
 
 .container h1{

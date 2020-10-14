@@ -4,13 +4,17 @@
 
 body {
   background-image: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-size: cover;
+  
 }
 
 .container{
   text-align: center;
-  min-height: 100vh;
-  margin: 0 10%;
+  margin: 2% 10%;
   background-color:white;
+  border-radius: 8px;
+  min-height: 100vh;
 }
 
 .container h1{
@@ -23,4 +27,21 @@ body {
   justify-content: center;
   margin: 10px;
   padding: 20px 10px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10%;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.MuiButton-label {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: solid 1px white;
 }

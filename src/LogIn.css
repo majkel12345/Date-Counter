@@ -1,0 +1,14 @@
+.logIn {
+    align-content: center;
+    margin-top: 20%;
+    min-height: 100vh;
+}
+
+
+
+
+.MuiContainer-maxWidthXs {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+}

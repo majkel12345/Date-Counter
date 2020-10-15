@@ -14,14 +14,14 @@ const Counter = ({name, date}) => {
 
     const [secondsCounter, setSecondsCounter] = useState(null)
     
-        useEffect(() => {
-            setInterval(()=> {
-                setSecondsCounter(seconds)
-                setSecondsCounter(minutes)
-                setSecondsCounter(hours)
-                setSecondsCounter(days)
-            },1000)
-        })
+        // useEffect(() => {
+        //     setInterval(()=> {
+        //         setSecondsCounter(seconds)
+        //         setSecondsCounter(minutes)
+        //         setSecondsCounter(hours)
+        //         setSecondsCounter(days)
+        //     },1000)
+        // })
     
 
     return(

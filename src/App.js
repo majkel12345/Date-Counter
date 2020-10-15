@@ -5,7 +5,7 @@ import SignIn from './components/SignIn'
 import Main from './components/Main'
 import {NavLink} from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import firebase, { auth } from 'firebase'
+import firebase from 'firebase'
 
 
 function App() {
@@ -39,11 +39,20 @@ function App() {
                 }
               </div>
                 <Switch>
-                    <Route exact path="/">
+                    {/* <Route exact path="/">
                         <Main />
-                    </Route>
+                    </Route> */}
+                    {user ?
+                      <Route exact path="/">
+                        <Main logedIn/>
+                      </Route>
+                      :
+                      <Route exact path="/">
+                          <Main />
+                      </Route>
+                    }
                     <Route path="/signIn">
-                        <SignIn />
+                        <SignIn/>
                     </Route>
                     <Route path="/signUp">
                         <SignIn isSignUp/>

@@ -1,30 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import Counter from './Counter'
-import firebase, { auth } from 'firebase'
+import DATA_BASE from '../index'
 import '../App.css';
 
-const Main = () => {
 
+const Main = (props) => {
 
+const [counter, setCounter] = useState([])
+
+useEffect(()=>{
+  fetch(`${DATA_BASE}/events.json`)
+  .then(response => response.json())
+  .then(data => {
+    setCounter(data)
+  })
+})
 
 
     return(
       <div className='container'>
 
         <div className='counters'>
-          <Counter 
-          name = 'Nowy Rok'
-          date = '1 Jan 2021'
+        {counter.map((event, index)=>{
+          return <Counter
+          key = {index} 
+          name = {event.name}
+          date = {event.date}
           />
-          <Counter 
-          name = 'Moje Urodziny'
-          date = '18 Feb 2021'
-          />
-          <Counter 
-          name = 'Moje Urodziny'
-          date = '18 Feb 2021'
-          />
+        })
+        }
         </div>
+        {props.logedIn ?
+        <button>
+          klik
+        </button>
+        : null
+        }
       </div>
     );
 }

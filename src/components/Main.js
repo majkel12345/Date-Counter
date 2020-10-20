@@ -4,16 +4,20 @@ import DATA_BASE from '../index'
 import '../App.css';
 
 
-const Main = (props) => {
+const Main = () => {
 
 const [counter, setCounter] = useState([])
 
 useEffect(()=>{
+  let mounted = true
   fetch(`${DATA_BASE}/events.json`)
   .then(response => response.json())
   .then(data => {
-    setCounter(data)
+    if(mounted){
+      setCounter(data)
+    }
   })
+  return () => mounted = false
 })
 
 
@@ -30,12 +34,7 @@ useEffect(()=>{
         })
         }
         </div>
-        {props.logedIn ?
-        <button>
-          klik
-        </button>
-        : null
-        }
+        
       </div>
     );
 }

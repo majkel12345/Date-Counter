@@ -6,6 +6,7 @@ import Main from './components/Main'
 import {NavLink} from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import firebase from 'firebase'
+import Form from './components/Form'
 
 
 function App() {
@@ -30,12 +31,18 @@ function App() {
         <div>
             <BrowserRouter>
               <div className='navBar'>
-                {user && `Hello ${user.email}!!`}
+                {/* {user && `Hello ${user.email}!!`} */}
                 {
                   user ?
-                  <Button color="inherit" component={NavLink} to='/' onClick = {handleOnClick}>Sign Out</Button>
+                  <div>
+                    <span>Hello {user.email}!!</span>
+                    <Button style={{padding:'10px',margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/' onClick = {handleOnClick}>Sign Out</Button>
+                    <Button style={{padding:'10px',margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/addNew'>
+                      Dodaj wydarzenie
+                    </Button>
+                  </div>
                   :
-                  <Button color="inherit" component={NavLink} to='/signIn'>Sign In</Button>
+                  <Button style={{padding:'10px', margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/signIn'>Sign In</Button>
                 }
               </div>
                 <Switch>
@@ -56,6 +63,9 @@ function App() {
                     </Route>
                     <Route path="/signUp">
                         <SignIn isSignUp/>
+                    </Route>
+                    <Route path="/addNew">
+                        <Form/>
                     </Route>
                    
                 </Switch>

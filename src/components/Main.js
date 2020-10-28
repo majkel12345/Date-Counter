@@ -13,8 +13,18 @@ useEffect(()=>{
   fetch(`${DATA_BASE}/events.json`)
   .then(response => response.json())
   .then(data => {
+    const arrayData = data
+                    ? Object
+                        .keys(data)
+                        .map(key => {
+                            return {
+                                id: key,
+                                ...data[key]
+                            }
+                        })
+                    : []
     if(mounted){
-      setCounter(data)
+      setCounter(arrayData)
     }
   })
   return () => mounted = false

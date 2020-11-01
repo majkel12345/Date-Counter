@@ -12,7 +12,10 @@ body {
 .container{
   text-align: center;
   margin: 2% 10%;
-  background-color:white;
+  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 8px;
   min-height: 100vh;
 }
@@ -24,7 +27,7 @@ body {
 .counters{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   margin: 10px;
   padding: 0 10px;
 }
@@ -38,6 +41,13 @@ body {
   font-size: 1.2rem;
   color: white;
 }
+
+
+.cont {
+  display: grid;
+  place-items: center;
+}
+
 /* 
 .MuiButton-label {
   padding: 10px;

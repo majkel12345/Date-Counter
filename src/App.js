@@ -45,6 +45,9 @@ function App() {
                   <Button style={{padding:'10px', margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/signIn'>Zaloguj</Button>
                 }
               </div>
+              <div className='cont'>
+
+              
                 <Switch>
                     {/* <Route exact path="/">
                         <Main />
@@ -69,6 +72,7 @@ function App() {
                     </Route>
                    
                 </Switch>
+                </div>
             </BrowserRouter>
         </div>
 

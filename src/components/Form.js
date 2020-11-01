@@ -11,8 +11,9 @@ import '../LogIn.css'
 
 const Form = () => {
 
-    const [name, setName] = useState('')
-    const [date, setDate] = useState('')
+    const [name, setName] = useState('');
+    const [date, setDate] = useState('');
+    const [redirect, setRedirect] = useState(false)
 
     const handleOnChangeName = (event) => {
         setName(event.target.value)
@@ -41,13 +42,20 @@ const Form = () => {
             body: JSON.stringify(newForm)
         }).then(() => {
             resetForm();
-            console.log('good')
+            setRedirect(true)
         })
     }
 
 
     return(
-        <Container component="main" maxWidth="xs">
+
+
+        <div className='logIn'>
+            {redirect ?
+                    <Redirect to='/'/>
+                : 
+
+            <Container component="main" maxWidth="xs">
                     <form noValidate onSubmit = {handleOnSubmit}>
                         <TextField
                             variant="outlined"
@@ -88,6 +96,8 @@ const Form = () => {
                        
                     </form>
                 </Container>
+                }
+            </div>
     );
 }
 

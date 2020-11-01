@@ -36,13 +36,13 @@ function App() {
                   user ?
                   <div>
                     <span>Hello {user.email}!!</span>
-                    <Button style={{padding:'10px',margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/' onClick = {handleOnClick}>Sign Out</Button>
+                    <Button style={{padding:'10px',margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/' onClick = {handleOnClick}>Wyloguj</Button>
                     <Button style={{padding:'10px',margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/addNew'>
                       Dodaj wydarzenie
                     </Button>
                   </div>
                   :
-                  <Button style={{padding:'10px', margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/signIn'>Sign In</Button>
+                  <Button style={{padding:'10px', margin:'10px', border:'1px solid white'}} color="inherit" component={NavLink} to='/signIn'>Zaloguj</Button>
                 }
               </div>
                 <Switch>

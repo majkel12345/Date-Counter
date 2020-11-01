@@ -60,7 +60,7 @@ const SignIn = (props) => {
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label="Email"
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -72,8 +72,8 @@ const SignIn = (props) => {
                             margin="normal"
                             required
                             fullWidth
-                            name="password"
-                            label="Password"
+                            name="Hasło"
+                            label="Hasło"
                             type="password"
                             id="password"
                             autoComplete="current-password"
@@ -88,15 +88,15 @@ const SignIn = (props) => {
                             >
                             {
                                 props.isSignUp ? 
-                                'sign Up'
+                                'Zarejestruj'
                                 :
-                                'sign In'
+                                'Zaloguj'
                             }
                         </Button>
                         <div style={{ paddingTop: '20px' }} >
                             {props.isSignUp
-                                ? <Link to='/signIn'>Already have an account? Sign In</Link>
-                                : <Link to='/signUp'>Don't have an account? Sign Up</Link>
+                                ? <Link to='/signIn'>Masz już konto? Zaloguj się</Link>
+                                : <Link to='/signUp'>Nie masz jeszcze konta? Zarejestruj się</Link>
                             }
                         </div>
                        
